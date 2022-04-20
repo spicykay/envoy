@@ -100,8 +100,8 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: http-upstream1
-                port_value: 80
+                address: host.docker.internal
+                port_value: 9443
 
   - name: proxy-domain2
     type: STRICT_DNS
@@ -113,8 +113,8 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: http-upstream2
-                port_value: 80
+                address: host.docker.internal
+                port_value: 8000
 
   - name: proxy-domain3
     type: STRICT_DNS
@@ -126,5 +126,5 @@ static_resources:
         - endpoint:
             address:
               socket_address:
-                address: https-upstream3
-                port_value: 443
+                address: host.docker.internal
+                port_value: 9000
